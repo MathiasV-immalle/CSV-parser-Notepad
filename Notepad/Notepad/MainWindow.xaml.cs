@@ -23,14 +23,13 @@ namespace Notepad
     public partial class MainWindow : Window
     {
         List<Persoon> personen = new List<Persoon>();
-        
+        List<Persoon> parsedPersonen = new List<Persoon>();
+        int x = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            personen.Add(
-                new Persoon() { Voornaam = "Willy", Achternaam = "Janssens", GeboorteDatum = new DateTime(1990, 1, 2) }
-            );
-            grid.ItemsSource = personen;
+            MessageBox.Show("Please add / upload your content! (ex: FirstName;LastName;DateOfBirth).");
         }
 
         private void exitItem_Click(object sender, RoutedEventArgs e)
@@ -68,44 +67,55 @@ namespace Notepad
                 + "File.Clear: Clears the window." + Environment.NewLine
                 + "File.Exit: Closes the window." + Environment.NewLine
                 + "Help.About: Opens this useless window." + Environment.NewLine
+                + "Tools.Parse: Parses the content of the TextBox to the DataGrid" + Environment.NewLine
+                + "Tools.Show-List: Shows a messagebox with the content of the DataGrid" + Environment.NewLine
                 + "Greetz, Matske", "About NotePad");
         }
 
         private void Parse_Click(object sender, RoutedEventArgs e)
         {
-            List<Persoon> parsedPersonen = new List<Persoon>();
-            parsedPersonen.Clear();
-            string[] filedata = fileContents.Text.Split('\n');
-            try
+            if (fileContents.Text == "") { MessageBox.Show("Please add some content first!"); }
+            else
             {
-                foreach (var row in filedata)
+                parsedPersonen.Clear();
+                string[] filedata = fileContents.Text.Split('\n');
+                try
                 {
-                    string[] fields = row.Split(';');
-                    var p = new Persoon();
-                    p.Voornaam = fields[0];
-                    p.Achternaam = fields[1];
-                    p.GeboorteDatum = DateTime.Parse(fields[2]);
-                    parsedPersonen.Add(p);
+                    foreach (var row in filedata)
+                    {
+                        string[] fields = row.Split(';');
+                        var p = new Persoon();
+                        p.Voornaam = fields[0];
+                        p.Achternaam = fields[1];
+                        p.Geboortedatum = DateTime.Parse(fields[2]);
+                        parsedPersonen.Add(p);
+                    }
                 }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.ToString());
+                }
+                grid.ItemsSource = parsedPersonen;
+                grid.Items.Refresh();
+                x += 1;
             }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.ToString());
-            }
-            grid.ItemsSource = parsedPersonen;
         }
 
         private void ShowPersonenList__Click(object sender, RoutedEventArgs e)
         {
-            string s = "";
-
-            foreach (var p in parsedPersonen)
+            if (x >= 1)
             {
-                s += p.ToString();
-                s += Environment.NewLine;
-            }
+                string s = "";
 
-            MessageBox.Show(s);
+                foreach (var p in parsedPersonen)
+                {
+                    s += p.ToString();
+                    s += Environment.NewLine;
+                }
+
+                MessageBox.Show(s);
+            }
+            else { MessageBox.Show("The content isn't yet added to the DataGrid. Please click 'Tools.Parse' first.", "ERROR"); }
         }
     }
 }
