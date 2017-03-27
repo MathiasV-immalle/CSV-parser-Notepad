@@ -29,7 +29,7 @@ namespace Notepad
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show("Please add / upload your content! (ex: FirstName;LastName;DateOfBirth).");
+            MessageBox.Show("Please add / upload your content! (ex: FirstName;LastName;DateOfBirth).", "ERROR");
         }
 
         private void exitItem_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ namespace Notepad
 
         private void Parse_Click(object sender, RoutedEventArgs e)
         {
-            if (fileContents.Text == "") { MessageBox.Show("Please add some content first!"); }
+            if (fileContents.Text == "") { MessageBox.Show("Please add some content first!", "ERROR"); }
             else
             {
                 parsedPersonen.Clear();
