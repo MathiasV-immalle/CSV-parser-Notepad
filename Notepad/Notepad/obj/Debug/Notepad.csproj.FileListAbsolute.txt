@@ -12,3 +12,21 @@
 \\imma-fs-0003\mathias.vansant$\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
 \\imma-fs-0003\mathias.vansant$\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.exe
 \\imma-fs-0003\mathias.vansant$\documents\visual studio 2015\Projects\Notepad\Notepad\obj\Debug\Notepad.pdb
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\Notepad.exe.config
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.exe
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.pdb
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.csprojResolveAssemblyReference.cache
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\MainWindow.g.cs
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\App.g.cs
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad_MarkupCompile.cache
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad_MarkupCompile.lref
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\Notepad.exe
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\Notepad.pdb
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\CsvHelper.dll
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\FileHelpers.dll
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\CsvHelper.xml
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\bin\Debug\FileHelpers.xml
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\MainWindow.baml
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.g.resources
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+\\imma-fs-0003\mathias.vansant$\documents\CSV-parser-Notepad\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache

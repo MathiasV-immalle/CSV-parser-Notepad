@@ -23,7 +23,8 @@ namespace Notepad
     public partial class MainWindow : Window
     {
         List<Persoon> personen = new List<Persoon>();
-        
+        List<Persoon> parsedPersonen = new List<Persoon>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -63,17 +64,19 @@ namespace Notepad
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("File.Open: Allows you to open a file." + Environment.NewLine 
-                + "File.Save: Allows you to save the file." + Environment.NewLine 
+            MessageBox.Show("File.Open: Allows you to open a file." + Environment.NewLine
+                + "File.Save: Allows you to save the file." + Environment.NewLine
                 + "File.Clear: Clears the window." + Environment.NewLine
                 + "File.Exit: Closes the window." + Environment.NewLine
                 + "Help.About: Opens this useless window." + Environment.NewLine
+                + "Tools.Parse: Parses the content of the TextBox to the DataGrid." + Environment.NewLine
+                + "Tools.Show-List: Opens a messagebox with the content of the DataGrid." + Environment.NewLine
                 + "Greetz, Matske", "About NotePad");
         }
 
         private void Parse_Click(object sender, RoutedEventArgs e)
         {
-            List<Persoon> parsedPersonen = new List<Persoon>();
+           
             parsedPersonen.Clear();
             string[] filedata = fileContents.Text.Split('\n');
             try
@@ -86,6 +89,7 @@ namespace Notepad
                     p.Achternaam = fields[1];
                     p.GeboorteDatum = DateTime.Parse(fields[2]);
                     parsedPersonen.Add(p);
+                   
                 }
             }
             catch (Exception exc)
@@ -93,6 +97,7 @@ namespace Notepad
                 MessageBox.Show(exc.ToString());
             }
             grid.ItemsSource = parsedPersonen;
+            grid.Items.Refresh();
         }
 
         private void ShowPersonenList__Click(object sender, RoutedEventArgs e)
